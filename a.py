@@ -3,13 +3,13 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 
-# Initialize WebDriver for Chrome (Headless)
+# Initialize WebDriver for Chromium (Headless)
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')  # Run browser in headless mode (no UI)
 options.add_argument('--disable-gpu')  # Disable GPU for better performance
 options.add_argument('--no-sandbox')  # Sandbox issues with some environments
 options.add_argument('--disable-dev-shm-usage')  # Overcome limited resource problems
-options.binary_location = '/usr/bin/google-chrome'  # Update this path to the correct location
+options.binary_location = '/usr/bin/chromium-browser'  # Path to Chromium
 
 # Set up the ChromeDriver with WebDriverManager
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
