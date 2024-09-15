@@ -9,6 +9,7 @@ options.add_argument('--headless')  # Run browser in headless mode (no UI)
 options.add_argument('--disable-gpu')  # Disable GPU for better performance
 options.add_argument('--no-sandbox')  # Sandbox issues with some environments
 options.add_argument('--disable-dev-shm-usage')  # Overcome limited resource problems
+options.binary_location = '/path/to/chrome'  # Specify the path to Chrome binary
 
 # Set up the ChromeDriver with WebDriverManager
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
